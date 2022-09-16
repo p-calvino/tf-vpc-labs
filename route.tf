@@ -2,7 +2,7 @@ resource "aws_route_table" "tf_route" {
   vpc_id = aws_vpc.main.id
 
   route {
-    cidr_block = "0.0.0.0/24"
+    cidr_block = "0.0.0.0/0"
     gateway_id = aws_internet_gateway.terraform-igw.id
   }
 }
